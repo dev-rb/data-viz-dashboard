@@ -25,56 +25,7 @@ app = dash.Dash(server=server, title="Data Viz")
 
 app.layout = html.Div(id="spam", className="allContainer", children=[
     html.Div(className="background"),
-    # html.Div(className="background", children=[
-    #     html.P(className="moving", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB"),
-    #     ]),
-    #     html.P(className="moving moving2", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB")
-    #     ]),
-    #     html.P(className="moving", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB"),
-    #     ]),
-    #     html.P(className="moving moving2", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB")
-    #     ]),
-    #     html.P(className="moving", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB"),
-    #     ]),
-    #     html.P(className="moving moving2", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB")
-    #     ]),
-    #     html.P(className="moving", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB"),
-    #     ]),
-    #     html.P(className="moving moving2", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB")
-    #     ]),
-    #     html.P(className="moving", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB"),
-    #     ]),
-    #     html.P(className="moving moving2", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB")
-    #     ]),
-    #     html.P(className="moving", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB"),
-    #     ]),
-    #     html.P(className="moving moving2", children=[
-    #         html.Span(
-    #             children="Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB Dev-RB")
-    #     ])
-    # ]),
+
     html.Div(
         className="appContainer",
         children=[

@@ -35,7 +35,7 @@ body{
     flex-direction: row;
     padding: 0;
     gap: 0;
-    z-index: 4;
+    z-index: 2;
 }
 
 .background{
@@ -443,6 +443,7 @@ input[type="text"]:focus{
     background: #0C0C0C;
     gap: 0.5rem;
     text-decoration: none;
+    z-index: 6;
 }
 
 .name{
