@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@font-face {
+    font-family: 'Ailerons-Regular';
+    src: url('Ailerons-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #171717;
+}
+.allContainer{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem;
+    padding-bottom: 0;
+   
+
+}
+.appContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+    z-index: 4;
+}
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('background.png');
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: 0% 0%;
+    animation: move 40s linear forwards infinite;
+}
+
+.moving{
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.moving span{
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 6rem;
+    color: #202020;
+    animation: move 150s linear infinite;
+}
+
+.moving2 span{
+    animation-delay: 75s;
+}
+
+@keyframes move {
+    from{
+        background-position: 0 0;
+
+    }
+    to{
+        background-position: -1500px 0;
+    }
+}
+
+/*
+    DASHBOARD
+*/
+
+.dashboardContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    height: 100%;
+    flex: 3;
+    margin-right: 2.5rem;
+}
+
+.graphContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 2.5rem;
+}
+
+.graph{
+    position: relative;
+    flex: 1;
+    background: #171717;
+    border-radius: 2px;
+    border: 2px solid #313131;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: 0.5s ease-in-out;  
+}
+
+.activeGraph{
+    border: 2px solid #48FFC7;   
+}
+
+.inactiveScreen{
+    width: 98%;
+    height: 98%;
+    background: rgba(36, 36, 36, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.graph:hover .expandButton{
+    display: flex;
+}
+
+.expandButton{
+    width: 2rem;
+    height: 2rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: white;
+    background: #313131;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.inactiveScreen:hover{
+    cursor: pointer;
+}
+
+.inactiveScreen:hover .modifyText{
+    color: white;
+    
+}
+
+.modifyText{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #202020;
+}
+
+/*
+    AGGREGATES
+*/
+
+.aggregateContainer{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 15rem;
+    background: #171717;
+    border-radius: 2px;
+    border: 2px solid #48FFC7;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.aggregateOne{
+    height: 100%;
+    flex: 1;
+    overflow: auto;
+}
+
+.aggregateOne::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+.aggregateOne::-webkit-scrollbar-track{
+    background: #505050;
+}
+
+.aggregateOne::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 20rem;
+}
+
+.seperatorLine{
+    width: 2px;
+    height: 85%;
+    background: #134636;
+}
+
+.aggregateTwo{
+    height: 100%;
+    flex: 1;
+    overflow: auto;
+}
+
+.aggregateTwo::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+.aggregateTwo::-webkit-scrollbar-track{
+    background: #505050;
+}
+
+.aggregateTwo::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 20rem;
+}
+
+.tableTitle{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.dash-table-container{
+    width: 100%;
+    height: 100%;
+}
+/* 
+.cell-table span{
+    color: white;
+}
+
+td div{
+    color: white;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th,.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td{
+    background: #202020;
+    text-align: center;
+} */
+
+/*
+    SETTINGS
+*/
+
+.settingsContainer{
+    flex: 1;
+    height: 100%;
+    background: #171717;
+    border-radius: 2px;
+    border: 2px solid #48FFC7;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    overflow: auto;
+}
+
+.settingsOne{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.settingsTwo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.settingsTitle{
+    width: fit-content;
+    position: relative;
+    margin-top: -1rem;
+    margin-bottom: 0;
+    font-size: 3rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    color: #313131;
+}
+
+.label{
+    width: fit-content;
+    position: relative;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    color: #e4e4e4;
+}
+
+.label::after{
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: -1rem;
+    width: 2px;
+    height: 2rem;
+    background: #FF4880;
+}
+
+.slider{
+    width: 100%;
+    padding-left: 0px !important;
+}
+
+.rc-slider-track{
+    background: #FF4880;
+}
+
+.rc-slider-handle{
+    background: white;
+    border: 2px solid #FF4880;
+}
+
+.rc-slider-handle:hover,
+.rc-slider-handle:focus,
+.rc-slider-handle:active{
+    border-color: #FF4880;
+    box-shadow: 0 0 4px #48FFC7;
+}
+
+.radioChoices{
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    background: #202020;
+    border: none;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus{
+    box-shadow: 0 0 4px #FF4880;
+}
+
+.DateRangePickerInput{
+    background: transparent;
+}
+
+.DateRangePickerInput__withBorder{
+    border: none;
+}
+
+.DateInput{
+    background: none;
+}
+
+.DateRangePickerInput_arrow_svg{
+    fill: white;
+    margin: 0 0.2rem;
+}
+
+.dateRangePicker strong, small{
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.DayPickerNavigation_svg__horizontal{
+    fill: white;
+}
+.DayPickerNavigation_button__default{
+    background: #202020;
+    border: none;
+}
+
+.DayPicker, .DateRangePicker_picker, .CalendarMonthGrid, .DayPicker_transitionContainer, .CalendarMonth{
+    background: #171717;
+    
+}
+
+.DateRangePicker_picker{
+    box-shadow: 0 0 5px #FF4880;
+}
+
+.CalendarDay__default{
+    background: #202020;
+    color: #8b8b8b;
+}
+
+.CalendarDay__hovered_span{
+    border: 1px double #FF4880;
+}
+
+.CalendarDay__hovered_span:hover{
+    background: #eb87a5;
+    border: 1px double #FF4880;
+}
+
+.CalendarDay__selected_span{
+    border: 1px double #FF4880;
+    color: white;
+}
+
+.CalendarDay__selected_span:hover{
+    background: #eb87a5;
+    border: 1px double #FF4880;
+}
+
+.CalendarDay__selected, .CalendarDay__selected:active,
+.CalendarDay__selected:hover{
+    background: #FF4880;
+    border: 1px double #FF4880;
+    color: white;
+}
+
+/*
+    FOOTER
+*/
+
+.footer{
+    position: relative;
+    width: 25rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: #0C0C0C;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.name{
+    margin-right: 0.5rem;
+}
+
+.footer span{
+    height: 70%;
+    width: 4px;
+    background: #134636;
+}
+
+.footer h1{
+    font-size: 2rem;
+    font-family: "Ailerons-Regular", "Roboto";
+    font-weight: normal;
+    letter-spacing: -4px;
+    word-spacing: -10px;
+    color: #FF4880;
+    user-select: none;
+}
+
+.footer h1:last-child{
+    margin-left: 0.5rem;
+}
+
+.footer::before{
+    content: '';
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.footer:hover::before{
+    display: block;
+    animation: beep 1s infinite alternate ease-in-out;
+}
+
+@keyframes beep {
+    from{
+        box-shadow: 0 0px 4px #48FFC7, 0 0px 8px #FF4880;
+    }
+
+    to{
+        box-shadow: 0 0px 20px #48FFC7, 0 0px 30px #FF4880;
+    }
+}
